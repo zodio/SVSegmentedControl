@@ -10,9 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class SVSegmentedControl;
+@class SVFlatSegmentedControl;
 
-@interface SVSegmentedThumb : UIView
+@interface SVFlatSegmentedThumb : UIView
 
 @property (nonatomic, strong) UIImage *backgroundImage; // default is nil;
 @property (nonatomic, strong) UIImage *highlightedBackgroundImage; // default is nil;

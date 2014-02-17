@@ -8,14 +8,14 @@
 // https://github.com/samvermette/SVSegmentedControl
 //
 
-#import "SVSegmentedThumb.h"
+#import "SVFlatSegmentedThumb.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SVSegmentedControl.h"
+#import "SVFlatSegmentedControl.h"
 
-@interface SVSegmentedThumb ()
+@interface SVFlatSegmentedThumb ()
 
 @property (nonatomic, readwrite) BOOL selected;
-@property (nonatomic, readonly) SVSegmentedControl *segmentedControl;
+@property (nonatomic, readonly) SVFlatSegmentedControl *segmentedControl;
 @property (nonatomic, strong) UIImageView *thumbBackgroundImageView;
 @property (nonatomic, readonly) UIFont *font;
 
@@ -33,7 +33,7 @@
 @end
 
 
-@implementation SVSegmentedThumb {
+@implementation SVFlatSegmentedThumb {
     UIColor *_tintColor;
 }
 
@@ -137,8 +137,8 @@
     return _thumbBackgroundImageView;
 }
 
-- (SVSegmentedControl *)segmentedControl {
-    return (SVSegmentedControl*)self.superview;
+- (SVFlatSegmentedControl *)segmentedControl {
+    return (SVFlatSegmentedControl*)self.superview;
 }
 
 - (UIFont *)font {

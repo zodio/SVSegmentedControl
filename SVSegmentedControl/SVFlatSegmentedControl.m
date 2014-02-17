@@ -8,10 +8,10 @@
 // https://github.com/samvermette/SVSegmentedControl
 
 #import <QuartzCore/QuartzCore.h>
-#import "SVSegmentedControl.h"
+#import "SVFlatSegmentedControl.h"
 
 
-@interface SVSegmentedThumb ()
+@interface SVFlatSegmentedThumb ()
 
 @property (nonatomic, assign) UIFont *font;
 
@@ -30,7 +30,7 @@
 
 
 
-@interface SVSegmentedControl()
+@interface SVFlatSegmentedControl()
 
 - (void)activate;
 - (void)snap:(BOOL)animated;
@@ -38,7 +38,7 @@
 - (void)toggle;
 - (void)setupAccessibility;
 
-@property (nonatomic, strong) SVSegmentedThumb *thumb;
+@property (nonatomic, strong) SVFlatSegmentedThumb *thumb;
 @property (nonatomic, strong) NSMutableArray *thumbRects;
 @property (nonatomic, strong) NSMutableArray *accessibilityElements;
 
@@ -56,7 +56,7 @@
 @end
 
 
-@implementation SVSegmentedControl
+@implementation SVFlatSegmentedControl
 
 #pragma mark - Life Cycle
 
@@ -92,10 +92,10 @@
 	return self;
 }
 
-- (SVSegmentedThumb *)thumb {
+- (SVFlatSegmentedThumb *)thumb {
     
     if(_thumb == nil)
-        _thumb = [[SVSegmentedThumb alloc] initWithFrame:CGRectZero];
+        _thumb = [[SVFlatSegmentedThumb alloc] initWithFrame:CGRectZero];
     
     return _thumb;
 }

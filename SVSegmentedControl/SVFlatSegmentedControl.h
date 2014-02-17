@@ -11,18 +11,18 @@
 // Edited by Wojciech Czekalski in order to flatify the control
 
 #import <UIKit/UIKit.h>
-#import "SVSegmentedThumb.h"
+#import "SVFlatSegmentedThumb.h"
 #import <AvailabilityMacros.h>
 
 @protocol SVSegmentedControlDelegate;
 
-@interface SVSegmentedControl : UIControl
+@interface SVFlatSegmentedControl : UIControl
 
 @property (nonatomic, copy) void (^changeHandler)(NSUInteger newIndex); // you can also use addTarget:action:forControlEvents:
 @property (nonatomic, copy) NSArray *sectionTitles;
 @property (nonatomic, copy) NSArray *sectionImages;
 
-@property (nonatomic, strong, readonly) SVSegmentedThumb *thumb;
+@property (nonatomic, strong, readonly) SVFlatSegmentedThumb *thumb;
 @property (nonatomic, readonly) NSUInteger selectedSegmentIndex; // default is 0
 @property (nonatomic, readwrite) BOOL animateToInitialSelection; // default is NO
 @property (nonatomic, readwrite) BOOL crossFadeLabelsOnDrag; // default is NO
@@ -42,7 +42,7 @@
 @property (nonatomic, strong) UIFont *font; // default is [UIFont boldSystemFontOfSize:15]
 @property (nonatomic, strong) UIColor *textColor; // default is [UIColor grayColor];
 
-- (SVSegmentedControl*)initWithSectionTitles:(NSArray*)titlesArray;
+- (SVFlatSegmentedControl*)initWithSectionTitles:(NSArray*)titlesArray;
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
 
 // deprecated
@@ -55,6 +55,6 @@
 
 @protocol SVSegmentedControlDelegate
 
-- (void)segmentedControl:(SVSegmentedControl*)segmentedControl didSelectIndex:(NSUInteger)index;
+- (void)segmentedControl:(SVFlatSegmentedControl*)segmentedControl didSelectIndex:(NSUInteger)index;
 
 @end

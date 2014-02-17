@@ -17,7 +17,7 @@
 	
 	// 1st CONTROL
 	
-	SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Section 1", @"Section 2", nil]];
+	SVFlatSegmentedControl *navSC = [[SVFlatSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Section 1", @"Section 2", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
     };
@@ -28,7 +28,7 @@
 	
 	
 	// 2nd CONTROL
-	SVSegmentedControl *redSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"About", @"Help", @"Credits", nil]];
+	SVFlatSegmentedControl *redSC = [[SVFlatSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"About", @"Help", @"Credits", nil]];
     [redSC addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
 	redSC.crossFadeLabelsOnDrag = YES;
 	redSC.thumb.tintColor = [UIColor colorWithRed:0.6 green:0.2 blue:0.2 alpha:1];
@@ -40,7 +40,7 @@
 	
 	
 	// 3rd CONTROL
-	SVSegmentedControl *grayRC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Section 1", @"Section 2", nil]];
+	SVFlatSegmentedControl *grayRC = [[SVFlatSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Section 1", @"Section 2", nil]];
     [grayRC addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
 	grayRC.font = [UIFont boldSystemFontOfSize:19];
 	grayRC.titleEdgeInsets = UIEdgeInsetsMake(0, 14, 0, 14);
@@ -55,7 +55,7 @@
 	
 	
 	// 4th CONTROL
-	SVSegmentedControl *yellowRC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"One", @"Two", @"Three", nil]];
+	SVFlatSegmentedControl *yellowRC = [[SVFlatSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"One", @"Two", @"Three", nil]];
     [yellowRC addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
 	yellowRC.crossFadeLabelsOnDrag = YES;
 	yellowRC.font = [UIFont fontWithName:@"Marker Felt" size:20];
@@ -74,7 +74,7 @@
 
 #pragma mark - UIControlEventValueChanged
 
-- (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl {
+- (void)segmentedControlChangedValue:(SVFlatSegmentedControl*)segmentedControl {
 	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedSegmentIndex);
 }
 
