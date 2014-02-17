@@ -8,6 +8,8 @@
 // https://github.com/samvermette/SVSegmentedControl
 //
 
+// Edited by Wojciech Czekalski in order to flatify the control
+
 #import <UIKit/UIKit.h>
 #import "SVSegmentedThumb.h"
 #import <AvailabilityMacros.h>
@@ -39,15 +41,11 @@
 
 @property (nonatomic, strong) UIFont *font; // default is [UIFont boldSystemFontOfSize:15]
 @property (nonatomic, strong) UIColor *textColor; // default is [UIColor grayColor];
-@property (nonatomic, strong) UIColor *textShadowColor;  // default is [UIColor blackColor]
-@property (nonatomic, readwrite) CGSize textShadowOffset;  // default is CGSizeMake(0, -1)
-@property (nonatomic, strong) UIColor *innerShadowColor; // default is [UIColor colorWithWhite:0 alpha:0.8]
 
 - (SVSegmentedControl*)initWithSectionTitles:(NSArray*)titlesArray;
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
 
 // deprecated
-@property (nonatomic, strong) UIColor *tintColor __attribute__((deprecated("review your color (it doesn't get darkened automatically anymore) and assign it 'backgroundTintColor' instead")));
 @property (nonatomic, readwrite) NSUInteger selectedIndex __attribute__((deprecated("use 'setSelectedSegmentIndex:animated:' instead")));
 - (void)setSelectedIndex:(NSUInteger)index animated:(BOOL)animated __attribute__((deprecated("use 'setSelectedSegmentIndex:animated:' instead")));
 - (void)moveThumbToIndex:(NSUInteger)segmentIndex animate:(BOOL)animate __attribute__((deprecated("use 'setSelectedSegmentIndex:animated:' instead")));

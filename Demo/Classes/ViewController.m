@@ -45,6 +45,7 @@
 	grayRC.font = [UIFont boldSystemFontOfSize:19];
 	grayRC.titleEdgeInsets = UIEdgeInsetsMake(0, 14, 0, 14);
 	grayRC.height = 46;
+    grayRC.cornerRadius = 23.f;
 	grayRC.thumb.tintColor = [UIColor colorWithRed:0 green:0.5 blue:0.1 alpha:1];
 	grayRC.mustSlideToChange = YES;
     
@@ -60,11 +61,10 @@
 	yellowRC.font = [UIFont fontWithName:@"Marker Felt" size:20];
 	yellowRC.titleEdgeInsets = UIEdgeInsetsMake(0, 14, 0, 14);
 	yellowRC.height = 40;
+    yellowRC.cornerRadius = 20.f;
     [yellowRC setSelectedSegmentIndex:2 animated:NO];
 	yellowRC.thumb.tintColor = [UIColor colorWithRed:0.999 green:0.889 blue:0.312 alpha:1.000];
 	yellowRC.thumb.textColor = [UIColor blackColor];
-	yellowRC.thumb.textShadowColor = [UIColor colorWithWhite:1 alpha:0.5];
-	yellowRC.thumb.textShadowOffset = CGSizeMake(0, 1);
 	
 	[self.view addSubview:yellowRC];
 	
