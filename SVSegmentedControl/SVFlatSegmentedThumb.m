@@ -145,6 +145,10 @@
     return self.label.font;
 }
 
+- (UIColor*)tintColor {
+    return _tintColor;
+}
+
 
 - (void)drawRect:(CGRect)rect {
     CGRect thumbRect = CGRectMake(self.segmentedControl.thumbEdgeInset.left,
