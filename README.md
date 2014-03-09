@@ -4,6 +4,10 @@ SVSegmentedControl is a customizable `UIControl` class that mimics `UISegmentedC
 
 ![SVSegmentedControl](http://f.cl.ly/items/213N0a1k2U2O0F3y053z/svsegmentedcontrol3.png)
 
+## My edits
+
+The control itself is really great but I updated it to look flat. It's also more lightweight thanks to that.
+
 ## Installation
 
 ### From CocoaPods
